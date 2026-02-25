@@ -12,6 +12,7 @@ public class Cau1_1 {
             System.out.println(s);
             return;
         }
+        
         String kq = "";
         int dem = 1;
         for (int i = 1; i < s.length(); i++) {
@@ -30,3 +31,4 @@ public class Cau1_1 {
         }
     }
 }
+
