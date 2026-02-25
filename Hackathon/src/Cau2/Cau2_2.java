@@ -1,36 +1,27 @@
 package Cau2;
 
-import java.util.Scanner;
-
 public class Cau2_2 {
+
     public static void main(String[] args){
 
+        int[] arr = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
 
-            Scanner sc = new Scanner(System.in);
-            int[] arr = new int[100];
+        int cur = arr[0];
+        int max = arr[0];
 
-            int k = 2;
-            arr = new int[]{1, 2, 3, 4, 5, 6};
+        for (int i = 1; i < arr.length; i++) {
 
-            int maxNum = arr[0];
-            for (int i = 0; i < arr.length; i++){
-                if(arr[i] > maxNum){
-                    maxNum = arr[i];
-                }
-            }
-            for (int i = 0; i < arr.length - 1; i++){
-                if(arr[i] + arr[i + 1] > maxNum){
-
-                }
+            if (cur + arr[i] > arr[i]) {
+                cur = cur + arr[i];
+            } else {
+                cur = arr[i];
             }
 
+            if (cur > max) {
+                max = cur;
+            }
+        }
 
+        System.out.println(max);
     }
-
-
-
-
-
-
-
 }
